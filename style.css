@@ -1,4 +1,3 @@
-/* Reset & Grid dasar */
 * {
   margin: 0;
   padding: 0;
@@ -87,7 +86,6 @@ p {
   margin-bottom: 1rem;
 }
 
-/* Navbar */
 .navbar {
   position: fixed;
   width: 100%;
@@ -173,7 +171,6 @@ p {
   border-radius: 2px;
 }
 
-/* Hero */
 .hero {
   position: relative;
   height: 100vh;
@@ -277,7 +274,6 @@ p {
   font-size: 0.9rem;
 }
 
-/* Social Links di Hero Section */
 .social-links-mini {
   display: flex;
   gap: 20px;
@@ -357,7 +353,6 @@ p {
   }
 }
 
-/* About Section - Diperbarui */
 .about {
   background: var(--white);
   position: relative;
@@ -584,7 +579,6 @@ p {
   }
 }
 
-/* Skills */
 .skills {
   background: var(--very-light-pink);
 }
@@ -622,7 +616,6 @@ p {
   border-radius: 2px;
 }
 
-/* Soft Skills */
 .soft-skills-list {
   display: flex;
   flex-direction: column;
@@ -667,7 +660,6 @@ p {
   margin: 0;
 }
 
-/* Hard Skills */
 .hard-skills-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -703,7 +695,6 @@ p {
   font-size: 0.9rem;
 }
 
-/* Activities Section - Updated */
 .activities {
   background: var(--white);
 }
@@ -810,7 +801,6 @@ p {
   transform: translateY(-2px);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .activities-list {
     grid-template-columns: 1fr;
@@ -822,7 +812,6 @@ p {
   }
 }
 
-/* Contact */
 .contact {
   background: var(--very-light-pink);
 }
@@ -898,7 +887,6 @@ p {
   align-self: flex-start;
 }
 
-/* Footer */
 .footer {
   background: var(--primary-pink);
   color: var(--white);
@@ -956,7 +944,6 @@ p {
   font-size: 0.9rem;
 }
 
-/* Animasi untuk elemen yang muncul saat scroll */
 .reveal {
   opacity: 0;
   transform: translateY(30px);
@@ -968,7 +955,6 @@ p {
   transform: translateY(0);
 }
 
-/* Responsif */
 @media (max-width: 992px) {
   h1 {
     font-size: 2.5rem;
@@ -1118,7 +1104,6 @@ p {
   }
 }
 
-/* === ANIMASI TULISAN NAMA DI HERO === */
 .typing-animation {
   overflow: hidden;
   border-right: 3px solid var(--primary-pink);
@@ -1137,7 +1122,6 @@ p {
   50% { border-color: var(--primary-pink) }
 }
 
-/* === ANIMASI GLITCH EFFECT UNTUK LOGO === */
 .logo {
   position: relative;
   animation: glitch-skew 1s infinite linear alternate-reverse;
@@ -1174,7 +1158,6 @@ p {
   100% { transform: translate(0) }
 }
 
-/* === BACKGROUND PARTICLES EFFECT === */
 .particles-container {
   position: absolute;
   width: 100%;
@@ -1207,7 +1190,6 @@ p {
   }
 }
 
-/* === HOVER EFFECT CARD YANG LEBIH DRAMATIS === */
 .about-card, .activity-card, .skill-category {
   position: relative;
   overflow: hidden;
@@ -1228,7 +1210,6 @@ p {
   left: 100%;
 }
 
-/* === ANIMASI FLOATING UNTUK PROFILE PHOTO === */
 .profile-photo, .about-photo {
   animation: float 6s ease-in-out infinite;
 }
@@ -1238,7 +1219,6 @@ p {
   50% { transform: translateY(-20px) }
 }
 
-/* === NEON EFFECT UNTUK BUTTON === */
 .btn {
   position: relative;
   overflow: hidden;
@@ -1274,7 +1254,6 @@ p {
   }
 }
 
-/* === ANIMASI TEXT GRADIENT === */
 .animated-gradient {
   background: linear-gradient(-45deg, #ff69b4, #ff1493, #db7093, #ffb6c1);
   background-size: 400% 400%;
@@ -1290,7 +1269,6 @@ p {
   100% { background-position: 0% 50% }
 }
 
-/* === PARALLAX SCROLL EFFECT === */
 .parallax {
   background-attachment: fixed;
   background-position: center;
@@ -1298,7 +1276,6 @@ p {
   background-size: cover;
 }
 
-/* Ensure animations don't cause performance issues on mobile */
 @media (max-width: 768px) {
   .particles-container,
   .cursor-trail {
@@ -1312,7 +1289,6 @@ p {
   }
 }
 
-/* Reduce motion for accessibility */
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -1321,7 +1297,6 @@ p {
   }
 }
 
-/* === NEW TYPING ANIMATION - CLEAN VERSION === */
 .typing-container {
   display: inline-block;
   position: relative;
@@ -1351,7 +1326,6 @@ p {
   50% { border-color: var(--primary-pink) }
 }
 
-/* Untuk judul kedua */
 .hero-subtitle {
   opacity: 0;
   animation: fadeInUp 1s ease 4s forwards;
@@ -1360,19 +1334,16 @@ p {
   margin: 10px 0 20px 0;
 }
 
-/* Untuk deskripsi */
 .hero-description {
   opacity: 0;
   animation: fadeInUp 1s ease 4.5s forwards;
 }
 
-/* Untuk tombol */
 .hero-buttons {
   opacity: 0;
   animation: fadeInUp 1s ease 5s forwards;
 }
 
-/* Untuk social links */
 .social-links-mini {
   opacity: 0;
   animation: fadeInUp 1s ease 5.5s forwards;
@@ -1389,7 +1360,6 @@ p {
   }
 }
 
-/* Responsive design */
 @media (max-width: 992px) {
   .typing-line-1 {
     font-size: 2.8rem;
@@ -1420,9 +1390,6 @@ p {
   }
 }
 
-/* Tambahkan di file style.css */
-
-/* Loading state untuk download button */
 .btn-download {
   position: relative;
   overflow: hidden;
@@ -1452,7 +1419,6 @@ p {
   100% { transform: rotate(360deg); }
 }
 
-/* Success feedback */
 .btn-download.success {
   background: #4CAF50;
   border-color: #4CAF50;
@@ -1461,4 +1427,5 @@ p {
 .btn-download.success::before {
   content: '✓ ';
   margin-right: 5px;
+
 }
