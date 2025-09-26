@@ -208,7 +208,6 @@ function setupResumeFallback() {
   
   if (downloadBtn) {
     downloadBtn.addEventListener('click', function(e) {
-      // Jika file tidak ada, arahkan ke email
       if (!this.getAttribute('href') || this.getAttribute('href') === '#') {
         e.preventDefault();
         window.location.href = 'mailto:davinanaysilla@gmail.com?subject=Request Resume&body=Halo Davina, saya tertarik untuk mendapatkan resume Anda.';
@@ -229,3 +228,4 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelector('h2').classList.add('animated-gradient');
 
 });
+
