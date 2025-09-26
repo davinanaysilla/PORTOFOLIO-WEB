@@ -1,4 +1,3 @@
-// === PARTICLES BACKGROUND ===
 function createParticles() {
   const container = document.createElement('div');
   container.className = 'particles-container';
@@ -8,7 +7,6 @@ function createParticles() {
     const particle = document.createElement('div');
     particle.className = 'particle';
     
-    // Random size and position
     const size = Math.random() * 5 + 2;
     const left = Math.random() * 100;
     const delay = Math.random() * 15;
@@ -22,7 +20,6 @@ function createParticles() {
   }
 }
 
-// === TYPING ANIMATION ===
 function initTypingAnimation() {
   const heroTitle = document.querySelector('.hero-text h1');
   const originalText = heroTitle.innerHTML;
@@ -45,7 +42,6 @@ function initTypingAnimation() {
   }, 100);
 }
 
-// === CURSOR TRAIL EFFECT ===
 function createCursorTrail() {
   const cursor = document.createElement('div');
   cursor.style.cssText = `
@@ -75,7 +71,6 @@ function createCursorTrail() {
   });
 }
 
-// === SCROLL PROGRESS BAR ===
 function createScrollProgress() {
   const progressBar = document.createElement('div');
   progressBar.style.cssText = `
@@ -98,19 +93,16 @@ function createScrollProgress() {
   });
 }
 
-// === INITIALIZE ALL ANIMATIONS ===
 document.addEventListener('DOMContentLoaded', function() {
   createParticles();
   initTypingAnimation();
   createCursorTrail();
   createScrollProgress();
   
-  // Add animated gradient class to specific elements
   document.querySelector('.logo').classList.add('animated-gradient');
   document.querySelector('h2').classList.add('animated-gradient');
 });
 
-// === ADD PARALLAX TO SECTIONS ===
 function initParallax() {
   const sections = document.querySelectorAll('.about, .skills');
   sections.forEach(section => {
@@ -119,17 +111,13 @@ function initParallax() {
   });
 }
 
-// === SIMPLE TYPING ANIMATION CONTROLLER ===
 function initTypingAnimation() {
   const typingElement = document.querySelector('.typing-line-1');
   
-  // Reset animation
   typingElement.style.animation = 'none';
   
-  // Trigger reflow
   void typingElement.offsetWidth;
   
-  // Reapply animation
   typingElement.style.animation = 'typing 4s steps(40, end) forwards, blink-caret 0.75s step-end infinite';
 }
 
@@ -137,30 +125,23 @@ document.addEventListener('DOMContentLoaded', function() {
   initTypingAnimation();
 });
 
-// Tambahkan di file script.js
-
-// === RESUME DOWNLOAD FUNCTION ===
 function initResumeDownload() {
   const downloadBtn = document.querySelector('a[href*="resume"]');
   
   if (downloadBtn) {
     downloadBtn.addEventListener('click', function(e) {
-      // Cek jika file resume tidak ada, tampilkan alert
       if (!checkFileExists(this.href)) {
         e.preventDefault();
         showDownloadError();
         return;
       }
       
-      // Tambahkan loading state
       this.classList.add('loading');
       
-      // Simulasi proses download (opsional)
       setTimeout(() => {
         this.classList.remove('loading');
         this.classList.add('success');
         
-        // Reset setelah 2 detik
         setTimeout(() => {
           this.classList.remove('success');
         }, 2000);
@@ -169,16 +150,11 @@ function initResumeDownload() {
   }
 }
 
-// Function untuk mengecek apakah file exists (simulasi)
 function checkFileExists(url) {
-  // Dalam implementasi nyata, ini akan melakukan request HEAD
-  // Untuk demo, kita asumsikan file selalu ada
   return true;
 }
 
-// Function untuk menampilkan error jika file tidak ditemukan
 function showDownloadError() {
-  // Buat modal atau alert sederhana
   const errorModal = document.createElement('div');
   errorModal.style.cssText = `
     position: fixed;
@@ -209,7 +185,6 @@ function showDownloadError() {
   
   document.body.appendChild(errorModal);
   
-  // Tambahkan overlay
   const overlay = document.createElement('div');
   overlay.style.cssText = `
     position: fixed;
@@ -228,7 +203,6 @@ function showDownloadError() {
   document.body.appendChild(overlay);
 }
 
-// === ALTERNATIVE: DOWNLOAD RESUME VIA EMAIL ===
 function setupResumeFallback() {
   const downloadBtn = document.querySelector('a[href*="resume"]');
   
@@ -243,16 +217,15 @@ function setupResumeFallback() {
   }
 }
 
-// === UPDATE DOMCONTENTLOADED ===
 document.addEventListener('DOMContentLoaded', function() {
   createParticles();
   initTypingAnimation();
   createCursorTrail();
   createScrollProgress();
-  initResumeDownload(); // Tambahkan ini
-  setupResumeFallback(); // Tambahkan ini
+  initResumeDownload(); 
+  setupResumeFallback(); 
   
-  // Add animated gradient class to specific elements
   document.querySelector('.logo').classList.add('animated-gradient');
   document.querySelector('h2').classList.add('animated-gradient');
+
 });
